@@ -1,3 +1,10 @@
+def promedio (array)
+    prom = array.inject(0) do |suma, cant|
+        suma + cant
+    end
+    prom / array.count.to_f
+end
+
 def clear_steps (pasos_diarios)
     pasos_limpios = []
     
@@ -14,5 +21,6 @@ end
 
 pasos = ['100', '21', '231as', '2031', '1052000', '213b', 'b123']
 
-print "Data original = #{pasos}\n"
-print "Data limpiada = #{clear_steps(pasos)}\n"
+print "Data original     = #{pasos}\n"
+print "Data limpiada     = #{clear_steps(pasos)}\n"
+print "Promedio de pasos = #{promedio(clear_steps(pasos))}\n"
